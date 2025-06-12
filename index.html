@@ -1,0 +1,75 @@
+{% extends "base.html" %}
+{% block title %}{% endblock %}
+{% block content %}
+<form action="http://127.0.0.1:5000/results" method="post">
+    <table class="table">
+        <thead>
+            <tr>
+                <th scope="col">Tea Preferences</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <th scope="col">
+                    Caffeine Preferences: What caffeine level would you like?
+                    (select one, multiple, or none)
+                    <p id="caffeine_form">
+                        <input type="checkbox" id="caffeine_vh" name="user_caffeine_very_high" value=False>
+                        <label for="caffeine_vh" class="form-label">Very High&ensp;</label>
+
+                        <input type="checkbox" id="caffeine_h" name="user_caffeine_high" value=False>
+                        <label for="caffeine_h" class="form-label">High&ensp;</label>
+
+                        <input type="checkbox" id="caffeine_m" name="user_caffeine_moderate" value=False>
+                        <label for="caffeine_m" class="form-label">Moderate&ensp;</label>
+
+                        <input type="checkbox" id="caffeine_l" name="user_caffeine_low" value=False>
+                        <label for="caffeine_l" class="form-label">Low&ensp;</label>
+
+                        <input type="checkbox" id="caffeine_vl" name="user_caffeine_very_low" value=False>
+                        <label for="caffeine_vl" class="form-label">Very Low&ensp;</label>
+
+                        <input type="checkbox" id="caffeine_n" name="user_caffeine_none" value=False>
+                        <label for="caffeine_n" class="form-label">No Caffeine</label>
+                    </p>
+                </th>
+            </tr>
+            <tr>
+                <th scope="col">
+                    Tea flavor preferences: Describe your ideal tea flavor with up to three keywords
+                    <p id="tea_flavor_form">
+                        <label for="tea_word1" class="form-label">(1)</label>
+                        <input type="text" id="tea_word1" name="user_tea_word1">
+                        <br>
+                        <label for="tea_word2" class="form-label">(2)</label>
+                        <input type="text" id="tea_word2" name="user_tea_word2" value="">
+                        <br>
+                        <label for="tea_word3" class="form-label">(3)</label>
+                        <input type="text" id="tea_word3" name="user_tea_word3" value="">
+                    </p>
+                </th>
+            </tr>
+        </tbody>
+    </table>
+    <table>
+        <thead>
+            <tr>
+                <th scope="col">
+                    Poetry Preferences: Provide a keyword or phrase you would like to appear in your poem
+                </th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <th scope="col" id="poem_pref_form">
+                    <label for="poem_word" class="form-label">Poem Keyword</label>
+                    <input type="text" id="poem_word" name="user_poem_keyword">
+                </th>
+            </tr>
+        </tbody>
+    </table>
+    <div>
+        <input type="submit" value="Submit&#x2728;">
+    </div>
+</form>
+{% endblock %}
