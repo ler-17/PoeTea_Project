@@ -1,0 +1,4 @@
+api keys to poetry.com can be obtained here:
+https://www.poetry.com/api.php
+requirements: (1) name (2) email address (3) description of use
+keys should be sent to the email address provided within a few minutes :)
